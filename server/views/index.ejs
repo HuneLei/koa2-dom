@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+    <form action="api/user/signIn.json" method="POST">
+        用户：
+        <input type="text" name="userName">
+        <br> 密码：
+        <input type="password" name="password">
+        <br>
+        <input type="text" name="source" value="form" style="visibility:hidden">
+        <br>
+        <input type="submit" value="提交">
+    </form>
+    <form action="api/user/signUp.json" method="POST">
+        用户：
+        <input type="text" name="userName">
+        <br> 密码：
+        <input type="password" name="password">
+        <br> 确认密码：
+        <input type="password" name="confirmPassword">
+        <br> 邮箱：
+        <input type="text" name="email">
+        <br>
+        <input type="submit" value="注册">
+    </form>
+    <form action="api/user/signLoad.json" method="POST" enctype="multipart/form-data">
+        标题：
+        <input type="text" name="title">
+        <br> 描述：
+        <textarea name="description"></textarea>
+        <br> 头像：
+        <input type="file" name="f1">
+        <br>
+        <input type="submit" value="添加">
+    </form>
+</body>
+
+</html>
