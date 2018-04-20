@@ -4,7 +4,9 @@
   "description": "this is node test lib",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "busboy": "^0.2.14",
+    "crypto": "^1.0.1",
     "ejs": "^2.5.8",
     "koa": "^2.5.0",
     "koa-body": "^2.5.0",

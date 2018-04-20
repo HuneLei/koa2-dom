@@ -11,8 +11,12 @@ const MysqlStore = require('koa-mysql-session')
 
 const config = require('./../config')
 const routers = require('./routers/index')
+const response = require('./middlewares/response')
 
 const app = new Koa()
+
+// 使用响应处理中间件
+app.use(response)
 
 // session存储配置
 const sessionMysqlConfig = {
